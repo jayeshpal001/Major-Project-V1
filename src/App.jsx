@@ -5,11 +5,13 @@ import { SignUpMentor } from './pages/SignUpMentor'
 const App = () => {
   return (
    <>
+
+
    <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/signUpMentor' element={<SignUpMentor/>} />
    </Routes>
-     
+
    </>
   )
 }
