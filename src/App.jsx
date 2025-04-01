@@ -1,9 +1,15 @@
 import React from 'react'
-import { Home } from './components/Home'
+import { Home } from './pages/Home'
+import { Route, Routes } from 'react-router-dom'
+import { SignUpMentor } from './pages/SignUpMentor'
 const App = () => {
   return (
    <>
-     <Home/>
+   <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/signUpMentor' element={<SignUpMentor/>} />
+   </Routes>
+     
    </>
   )
 }

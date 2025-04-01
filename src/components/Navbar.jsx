@@ -14,7 +14,6 @@ export default function Navbar() {
       </div>
       
       <div className="hidden md:flex space-x-4">
-        <button className="text-gray-600 hover:text-black">Sign In</button>
         <button className="bg-black text-white px-4 py-2 rounded-md">Sign Up</button>
       </div>
       
