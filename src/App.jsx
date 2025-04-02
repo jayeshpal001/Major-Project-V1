@@ -1,19 +1,12 @@
-import React from 'react'
-import { Home } from './pages/Home'
-import { Route, Routes } from 'react-router-dom'
-import { SignUpMentor } from './pages/SignUpMentor'
-const App = () => {
+import React from 'react';
+import HomePage from './pages/HomePage';
+
+function App() {
   return (
-   <>
-
-
-   <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/signUpMentor' element={<SignUpMentor/>} />
-   </Routes>
-
-   </>
-  )
+    <div className="App">
+      <HomePage />
+    </div>
+  );
 }
 
-export default App
+export default App;
