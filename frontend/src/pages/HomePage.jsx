@@ -5,7 +5,7 @@ import MentorsSection from "../components/sections/MentorsSection";
 import RoadmapSection from "../components/sections/RoadmapSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import CtaSection from "../components/sections/CtaSection";
-import NewsletterSection from "../components/sections/NewsletterSection";
+// import NewsletterSection from "../components/sections/NewsletterSection";
 import Footer from "../components/layout/Footer";
 
 export default function HomePage() {
@@ -18,7 +18,7 @@ export default function HomePage() {
       <RoadmapSection />
       <TestimonialsSection />
       <CtaSection />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
       <Footer />
     </div>
   );

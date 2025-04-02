@@ -2,6 +2,7 @@
 import { FaGoogle, FaMicrosoft, FaAmazon } from "react-icons/fa";
 import useTypingEffect from "../../hooks/useTypingEffect";
 import HeroImage from "../../assets/images/hero.png";
+import { Link } from "react-router-dom";
 
 const words = ["Accelerate", "Boost", "Level-Up", "Fast-Track"];
 
@@ -26,12 +27,18 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl active:scale-95">
+           <Link to="/juniorSignup">
+           <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl active:scale-95">
               Find Your Mentor
             </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-blue-500 transition-all hover:shadow-md">
+           </Link> 
+
+           <Link to="/mentorSignup">
+           <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-blue-500 transition-all hover:shadow-md">
               Become a Mentor
             </button>
+           </Link>
+            
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">

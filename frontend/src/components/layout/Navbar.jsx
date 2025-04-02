@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
       </div>
       
       <div className="hidden md:flex space-x-4">
-        <button className="bg-black text-white px-4 py-2 rounded-md">Sign Up</button>
+        <button className="bg-black text-white px-4 py-2 rounded-md"><Link to="/login" >Sign In</Link></button>
       </div>
       
       <button className="md:hidden text-gray-600" onClick={() => setIsOpen(!isOpen)}>
