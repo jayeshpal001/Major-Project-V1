@@ -21,27 +21,27 @@ export const STEPS = [
 export const MENTORS = [
   {
     name: "Jayesh Pal",
-    role: "Senior Full-Stack Developer",
+    role: "Full-Stack Developer",
     skills: ["React", "Node.js", "AWS"],
     img: "/src/assets/images/jayesh.jpg"
   },
   {
     name: "Deepika Sen",
-    role: "Senior Front-End Developer",
+    role: "Front-End Developer",
     skills: ["React", "Node.js", "AWS"],
     img: "/src/assets/images/deepika.jpg"
   },
   {
     name: "Taniya Pal",
-    role: "Senior Back-End Developer",
+    role: "Back-End Developer",
     skills: ["React", "Node.js", "AWS"],
     img: "/src/assets/images/taniya.png"
   },
   {
-    name: "Taniya Pal",
-    role: "Senior Back-End Developer",
+    name: "Yash Sarvate",
+    role: "Python Developer",
     skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/taniya.png"
+    img: "/src/assets/images/yash.png"
   },
   // Add other mentors
 ];

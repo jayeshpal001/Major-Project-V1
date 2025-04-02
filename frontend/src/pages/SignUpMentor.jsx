@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { AcademicCapIcon, LockClosedIcon, UserCircleIcon, BriefcaseIcon, BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import { CheckIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 export const SignUpMentor = () => {
     const [formData, setFormData] = useState({
@@ -9,137 +12,172 @@ export const SignUpMentor = () => {
         collegeName: '',
         email: '',
         password: '',
-      });
-    
-      const handleChange = (e) => {
+    });
+
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-      };
-    
-      const handleSubmit = (e) => {
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic
         console.log(formData);
-      };
-    
-      return (
-        <div className="min-h-screen bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
-          <div className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
-            {/* Left side with image */}
-            <div className="w-1/2 hidden md:block">
-              <img
-                src="https://via.placeholder.com/600x800" // Replace with your image URL
-                alt="Mentor"
-                className="w-full h-full object-cover"
-              />
-            </div>
-    
-            {/* Right side with form */}
-            <div className="w-full md:w-1/2 p-8">
-              <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Mentor Sign Up</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="flex space-x-4">
-                  <div className="w-1/2">
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-600">First Name</label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                      className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div className="w-1/2">
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-600">Last Name</label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
-    
-                <div>
-                  <label htmlFor="jobTitle" className="block text-sm font-medium text-gray-600">Job Title</label>
-                  <input
-                    type="text"
-                    id="jobTitle"
-                    name="jobTitle"
-                    value={formData.jobTitle}
-                    onChange={handleChange}
-                    required
-                    className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-    
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-600">Company</label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-    
-                <div>
-                  <label htmlFor="collegeName" className="block text-sm font-medium text-gray-600">College Name</label>
-                  <input
-                    type="text"
-                    id="collegeName"
-                    name="collegeName"
-                    value={formData.collegeName}
-                    onChange={handleChange}
-                    required
-                    className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-    
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-    
-                <div>
-                  <label htmlFor="password" className="block text-sm font-medium text-gray-600">Password</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    required
-                    className="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-    
-                <button
-                  type="submit"
-                  className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      );
     };
-    
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center p-4">
+            <div className="flex w-full max-w-6xl bg-white rounded-2xl shadow-xl overflow-hidden">
+                {/* Left side with image */}
+                <div className="hidden md:block relative w-1/2 bg-gradient-to-tr from-blue-600 to-purple-600">
+                    <div className="absolute inset-0 bg-opacity-30 bg-black flex items-center justify-center p-8">
+                        <div className="text-white text-center space-y-6">
+                            <AcademicCapIcon className="w-20 h-20 mx-auto text-white/90" />
+                            <h2 className="text-4xl font-bold">Join Our Mentor Community</h2>
+                            <p className="text-xl font-light">Share your expertise and shape the future of aspiring professionals</p>
+                            <div className="mt-8 space-y-2 text-left">
+                                <div className="flex items-center gap-2">
+                                    <CheckIcon className="w-6 h-6 text-green-400" />
+                                    <span>Connect with passionate learners</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <CheckIcon className="w-6 h-6 text-green-400" />
+                                    <span>Build your professional network</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <CheckIcon className="w-6 h-6 text-green-400" />
+                                    <span>Enhance your leadership skills</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right side with form */}
+                <div className="w-full md:w-1/2 p-8 md:p-12">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            Become a Mentor
+                        </h2>
+                        <p className="text-gray-500">Start your journey as a mentor in 3 simple steps</p>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="relative">
+                                <UserCircleIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="First Name"
+                                    value={formData.firstName}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                />
+                            </div>
+                            <div className="relative">
+                                <UserCircleIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Last Name"
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="relative">
+                            <BriefcaseIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                            <input
+                                type="text"
+                                id="jobTitle"
+                                name="jobTitle"
+                                placeholder="Job Title"
+                                value={formData.jobTitle}
+                                onChange={handleChange}
+                                required
+                                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="relative">
+                                <BuildingOffice2Icon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    placeholder="Company"
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                />
+                            </div>
+                            <div className="relative">
+                                <AcademicCapIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                <input
+                                    type="text"
+                                    id="collegeName"
+                                    name="collegeName"
+                                    placeholder="College Name"
+                                    value={formData.collegeName}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="relative">
+                            <EnvelopeIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Email Address"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                        </div>
+
+                        <div className="relative">
+                            <LockClosedIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                required
+                                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+                        >
+                            Create Mentor Account
+                        </button>
+                    </form>
+
+                    <p className="mt-6 text-center text-gray-500">
+                        Already have an account?{" "}
+                        <Link to="/login" className="text-blue-600 hover:underline">Log in here</Link>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+};
