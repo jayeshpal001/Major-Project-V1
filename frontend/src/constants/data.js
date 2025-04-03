@@ -84,3 +84,28 @@ export const FOUNDATIONS = [
     "System Design",
     "Interview Prep"
   ];
+  
+
+export const questionsData = [
+  {
+    id: 1,
+    question: "How to center a div in CSS?",
+    author: "Junior Dev",
+    timestamp: "2 hours ago",
+    answers: [
+      {
+        id: 1,
+        text: "Use flexbox: display: flex; justify-content: center; align-items: center;",
+        author: "CSS Expert",
+        timestamp: "1 hour ago"
+      }
+    ]
+  },
+  {
+    id: 2,
+    question: "Best resources to learn React?",
+    author: "Beginner",
+    timestamp: "3 hours ago",
+    answers: []
+  }
+];

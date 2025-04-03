@@ -11,7 +11,7 @@ import Footer from "../components/layout/Footer";
 export default function HomePage() {
   return (
     <div className="scroll-smooth w-full min-h-screen">
-      <Navbar />
+     
       <HeroSection />
       <HowItWorks />
       <MentorsSection />

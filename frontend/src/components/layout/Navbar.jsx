@@ -8,9 +8,9 @@ export default function Navbar() {
     <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
       <div className="text-xl font-bold text-indigo-600">LOGO</div>
       
-      <div className="hidden md:flex space-x-6">
-        <a href="#" className="font-semibold text-black">Home</a>
-        <a href="#" className="text-gray-500 hover:text-black">Mentors</a>
+      <div className="hidden md:flex space-x-6 ">
+        <Link to="/" className="font-semibold text-black">Home</Link>
+        <a href="#mentorId" className="text-gray-500 hover:text-black">Mentors</a>
         <a href="#" className="text-gray-500 hover:text-black">Resources</a>
         <a href="#" className="text-gray-500 hover:text-black">Community</a>
       </div>
