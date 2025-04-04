@@ -66,7 +66,7 @@ export const TESTIMONIALS = [
       },
     {
       text: "The community support helped me stay motivated during my job search. Highly recommend!",
-      author: "Yash Sarvate",
+      author: "Yash Sarwate",
       role: "Python Developer @Spotify"
     }
   ];
