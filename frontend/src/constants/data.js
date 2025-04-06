@@ -29,7 +29,7 @@ export const MENTORS = [
     name: "Deepika Sen",
     role: "Front-End Developer",
     skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/deepika.jpg"
+    img: "/src/assets/images/Deepika.png"
   },
   {
     name: "Taniya Pal",
