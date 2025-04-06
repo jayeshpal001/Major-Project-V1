@@ -29,7 +29,7 @@ export const MENTORS = [
     name: "Deepika Sen",
     role: "Front-End Developer",
     skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/deepika.jpg"
+    img: "/src/assets/images/Deepika.png"
   },
   {
     name: "Taniya Pal",
@@ -66,7 +66,7 @@ export const TESTIMONIALS = [
       },
     {
       text: "The community support helped me stay motivated during my job search. Highly recommend!",
-      author: "Yash Sarvate",
+      author: "Yash Sarwate",
       role: "Python Developer @Spotify"
     }
   ];
