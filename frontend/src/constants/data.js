@@ -109,3 +109,101 @@ export const questionsData = [
     answers: []
   }
 ];
+export const GUIDANCE_DATA = [
+  {
+    id: 1,
+    title: "Explore Engineering & Campus Life",
+    summary: "Get familiar with your college and explore various branches of engineering.",
+    detailed_data: [
+      "Explore different engineering branches to find your interest.",
+      "Attend orientation and campus tours to know your college well.",
+      "Make new friends and connect with seniors for guidance.",
+      "Understand the basic structure of your degree program.",
+      "Get familiar with college resources: library, labs, clubs, etc."
+    ],
+  },
+  {
+    id: 2,
+    title: "Start Programming & Attend Tech Events",
+    summary: "Begin your programming journey with C and explore CS subfields.",
+    detailed_data: [
+      "Start learning the C programming language with basic programs.",
+      "Understand programming logic and dry run code regularly.",
+      "Attend tech events, seminars, and workshops actively.",
+      "Explore various sub-domains in Computer Science.",
+      "Join a tech club or coding community in college."
+    ],
+  },
+  {
+    id: 3,
+    title: "Dive into Core CS Subjects",
+    summary: "Begin learning data structures, OS, and DBMS concepts.",
+    detailed_data: [
+      "Begin with Data Structures like arrays, stacks, and queues.",
+      "Study core subjects like Operating Systems and DBMS.",
+      "Understand memory management and database concepts.",
+      "Practice coding problems on basic data structures.",
+      "Participate in mini hackathons or coding challenges."
+    ],
+  },
+  {
+    id: 4,
+    title: "Advance DSA & Coding Practice",
+    summary: "Sharpen DSA skills and explore coding platforms like LeetCode.",
+    detailed_data: [
+      "Deep dive into Data Structures: trees, graphs, hashing.",
+      "Start solving problems on LeetCode, GFG, HackerRank, etc.",
+      "Participate in college or online coding contests.",
+      "Join study groups and collaborate on concepts.",
+      "Track your coding practice and build consistency."
+    ],
+  },
+  {
+    id: 5,
+    title: "Explore Web Development",
+    summary: "Learn full-stack development and build real projects.",
+    detailed_data: [
+      "Learn web development: HTML, CSS, JavaScript fundamentals.",
+      "Explore frontend frameworks like React.",
+      "Understand backend basics: Node.js, Express, MongoDB.",
+      "Build 2–3 mini full-stack projects.",
+      "Host your projects on GitHub and learn Git basics."
+    ],
+  },
+  {
+    id: 6,
+    title: "Build Projects & Apply for Internships",
+    summary: "Work on projects, core subjects, aptitude, and internship search.",
+    detailed_data: [
+      "Build more complete projects using what you’ve learned.",
+      "Strengthen your grasp on core subjects and DSA.",
+      "Practice aptitude and reasoning questions regularly.",
+      "Look for internship opportunities (Internshala, LinkedIn, etc).",
+      "Update your resume and build a LinkedIn profile."
+    ],
+  },
+  {
+    id: 7,
+    title: "Prepare for Placements",
+    summary: "Attend mock interviews, work on your major project, and get job-ready.",
+    detailed_data: [
+      "Attend walk-in drives and placement bootcamps.",
+      "Give mock interviews with friends or mentors.",
+      "Explore topics for your major project and start early.",
+      "Work on your soft skills and communication.",
+      "Contribute to open-source or collaborative projects."
+    ],
+  },
+  {
+    id: 8,
+    title: "Finish Strong!",
+    summary: "Complete your major project, give interviews, and graduate with confidence.",
+    detailed_data: [
+      "Complete and polish your major project for final evaluation.",
+      "Prepare for final interviews and placements.",
+      "Document your projects properly with readme and video demos.",
+      "Reflect on your journey and help juniors.",
+      "Enjoy the last moments of college and stay connected."
+    ],
+  },
+];
