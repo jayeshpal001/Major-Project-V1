@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AcademicCapIcon, LockClosedIcon, UserCircleIcon, BriefcaseIcon, BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 
 export const SignUpMentor = () => {
     const [formData, setFormData] = useState({
@@ -19,10 +20,28 @@ export const SignUpMentor = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         // Handle form submission logic
         console.log(formData);
+        try{
+            const response=await Axios.post('http://localhost:3002/mentorSignup', {
+                first_name: formData.firstName,
+                last_name: formData.lastName,
+                job_title: formData.jobTitle,
+                company: formData.company,
+                college: formData.collegeName,
+                email: formData.email,
+                password: formData.password
+              }) 
+            console.log('Mentor has been created')
+            alert(response.data.message)
+
+        }catch(error)
+        {
+         console.error('Error during signup :' ,error)
+         alert(error.response?.data?.message || 'Something went wrong!')
+        }
     };
 
     return (
