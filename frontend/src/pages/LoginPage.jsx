@@ -2,16 +2,36 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { LockClosedIcon, EnvelopeIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
+import Axios from 'axios';
+
 function LoginPage() {
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [loginEmail ,setLoginEmail]=useState('');
+   const [loginPassward,sentLoginPassword]=useState('')
+   const [error,setError]=useState()
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Logging in", formData);
+    console.log("Logging in" );
+    try{
+      const response=await Axios.post('http://localhost:3002/login', {
+      
+        LoginEmail:  loginEmail,
+        LoginPassword: loginPassward
+    }) 
+    console.log('Login successful');
+    console.log(response.data.user); // Optional: store user in localStorage
+    setError("")
+  
+    alert(response.data.message);
+
+    }catch(error)
+    {
+      console.error('Login error:', error.response?.data?.message || error.message);
+      alert(error.response?.data?.message || 'Invalid credentials');
+      setError("Invalid login credentials.")
+    }
   };
 
   return (
@@ -46,16 +66,25 @@ function LoginPage() {
             </h2>
             <p className="text-gray-500">Please sign in to continue</p>
           </div>
+           
+           
 
           <form onSubmit={handleSubmit} className="space-y-6">
+
+          {error && (
+  <div className="text-red-600 text-sm font-medium -mt-4 mb-2 px-1">
+    {error}
+  </div>
+)}
+
             <div className="relative">
               <EnvelopeIcon className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
+                value={loginEmail}
+                onChange={(e)=>setLoginEmail(e.target.value) }
                 required
                 className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
@@ -67,8 +96,8 @@ function LoginPage() {
                 type="password"
                 name="password"
                 placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
+                value={loginPassward}
+                onChange={(e)=>sentLoginPassword(e.target.value)}
                 required
                 className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
