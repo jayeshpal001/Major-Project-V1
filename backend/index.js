@@ -9,7 +9,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3002;
 
-app.use(cors());
+ 
+app.use(cors({
+    origin: 'http://localhost:5173', // your Vite frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true
+  }));
 app.use(bodyParser.json());
 
 // ✅ Mentor Registration Route
@@ -32,6 +38,30 @@ app.post('/mentorSignup', (req, res) => {
     });
 });
 
+
+app.post('/juniorSignup', (req, res) => {
+    const {email, password } = req.body;
+
+    if(!email || !password)
+    {
+        return res.status(401).json({ message: 'Email and password are required' });
+    }
+
+    const sql = 'INSERT INTO learner (email,password) VALUES (?,?)';
+
+    db.query(sql, [email, password], (err, result) => {
+        if (err) {
+            console.error('Error registering Junior:', err);
+            return res.status(500).json({ message: 'Failed to register Junior' });
+        }
+
+         else {
+            res.status(201).json({ message: 'Registered Successfully' });
+        }
+    });
+});
+ 
+
 // ✅ Mentor Login Route
 app.post('/login', (req, res) => {
     const { LoginEmail, LoginPassword } = req.body;
@@ -50,24 +80,11 @@ app.post('/login', (req, res) => {
             res.status(401).json({ message: 'Invalid email or password' });
         }
     });
+
+    
 });
 
-app.post('/juniorSignup', (req, res) => {
-    const { LoginEmail, LoginPassword } = req.body;
-
-    const sql = 'INSERT INTO learner (email,password) VALUES (?,?)';
-
-    db.query(sql, [LoginEmail, LoginPassword], (err, result) => {
-        if (err) {
-            console.error('Error registering Junior:', err);
-            return res.status(500).json({ message: 'Failed to register Junior' });
-        }
-
-         else {
-            res.status(401).json({ message: 'Registered Successfully' });
-        }
-    });
-});
+ 
 
 // Start the server
 app.listen(PORT, () => {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EnvelopeIcon, LockClosedIcon, UserIcon, AcademicCapIcon } from '@heroicons/react/24/outline';
 import { CheckIcon } from "@heroicons/react/24/solid";
+import Axios from "axios"
 function JuniorSignup() {
   const [formData, setFormData] = useState({
     email: '',
@@ -13,9 +14,22 @@ function JuniorSignup() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Signing up:', formData);
+    try{ 
+      const response=await Axios.post("http://localhost:3002/juniorSignup",{
+        email:formData.email,
+        password:formData.password
+
+      })
+      console.log("Successfully Registered")
+      alert(response.data.message)
+
+    }catch(error){
+      console.error('Error during signup :' ,error)
+      alert(error.response?.data?.message || 'Something went wrong!')
+    }
   };
 
   return (
