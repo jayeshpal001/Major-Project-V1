@@ -267,3 +267,111 @@ export const initialQuestions = [
     answers: []
   }
 ];
+// data.js
+
+export const resources = [
+  {
+    category: "YouTube Playlists",
+    description: "Best playlists for learning various tech stacks.",
+    items: [
+      {
+        name: "CodeWithHarry - Web Development",
+        link: "https://www.youtube.com/playlist?list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9",
+      },
+      {
+        name: "Apna College - DSA",
+        link: "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+      },
+      {
+        name: "FreeCodeCamp - Full Courses",
+        link: "https://www.youtube.com/c/Freecodecamp",
+      },
+    ],
+  },
+  {
+    category: "Coding Platforms",
+    description: "Practice coding and prepare for interviews.",
+    items: [
+      { name: "LeetCode", link: "https://leetcode.com/" },
+      { name: "HackerRank", link: "https://www.hackerrank.com/" },
+      { name: "CodeChef", link: "https://www.codechef.com/" },
+      { name: "GeeksForGeeks", link: "https://practice.geeksforgeeks.org/" },
+    ],
+  },
+  {
+    category: "Job & Internship Platforms",
+    description: "Find tech jobs and internships.",
+    items: [
+      { name: "LinkedIn Jobs", link: "https://www.linkedin.com/jobs/" },
+      { name: "Internshala", link: "https://internshala.com/" },
+      { name: "Hirect", link: "https://hirect.in/" },
+      { name: "Wellfound (AngelList)", link: "https://wellfound.com/" },
+    ],
+  },
+  {
+    category: "Documentation & References",
+    description: "Official docs for learning and debugging.",
+    items: [
+      { name: "MDN Web Docs", link: "https://developer.mozilla.org/" },
+      { name: "React Docs", link: "https://reactjs.org/docs/getting-started.html" },
+      { name: "Node.js Docs", link: "https://nodejs.org/en/docs" },
+      { name: "W3Schools", link: "https://www.w3schools.com/" },
+    ],
+  },
+  {
+    category: "Error Solving Sites",
+    description: "Communities and platforms to solve programming issues.",
+    items: [
+      { name: "Stack Overflow", link: "https://stackoverflow.com/" },
+      { name: "Reddit - r/learnprogramming", link: "https://www.reddit.com/r/learnprogramming/" },
+      { name: "Dev.to", link: "https://dev.to/" },
+      { name: "Hashnode", link: "https://hashnode.com/" },
+    ],
+  },
+  {
+    category: "Roadmaps",
+    description: "Structured learning paths for technologies.",
+    items: [
+      { name: "Roadmap.sh", link: "https://roadmap.sh/" },
+      { name: "Frontend Developer Roadmap", link: "https://github.com/thedaviddias/Front-End-Checklist" },
+      { name: "Developer Roadmaps GitHub", link: "https://github.com/kamranahmedse/developer-roadmap" },
+    ],
+  },
+  {
+    category: "Social Platforms",
+    description: "Grow your professional network.",
+    items: [
+      { name: "LinkedIn", link: "https://www.linkedin.com/" },
+      { name: "GitHub", link: "https://github.com/" },
+      { name: "Twitter (Tech)", link: "https://twitter.com/" },
+    ],
+  },
+  {
+    category: "Tech Installation & Tools",
+    description: "Download necessary development tools.",
+    items: [
+      { name: "Node.js", link: "https://nodejs.org/" },
+      { name: "VS Code", link: "https://code.visualstudio.com/" },
+      { name: "Postman", link: "https://www.postman.com/" },
+      { name: "MongoDB Compass", link: "https://www.mongodb.com/products/compass" },
+    ],
+  },
+  {
+    category: "Resume Builders",
+    description: "Create professional resumes.",
+    items: [
+      { name: "Novoresume", link: "https://novoresume.com/" },
+      { name: "Zety", link: "https://zety.com/resume-builder" },
+      { name: "Canva Resume", link: "https://www.canva.com/resumes/" },
+    ],
+  },
+  {
+    category: "Project Inspiration & Showcases",
+    description: "Find and showcase project ideas.",
+    items: [
+      { name: "DevProjects", link: "https://www.codementor.io/projects" },
+      { name: "Frontend Mentor", link: "https://www.frontendmentor.io/" },
+      { name: "Showwcase", link: "https://www.showwcase.com/" },
+    ],
+  },
+];

@@ -192,7 +192,7 @@ export const SignUpMentor = () => {
 
                     <p className="mt-6 text-center text-gray-500">
                         Already have an account?{" "}
-                        <Link to="/login" className="text-blue-600 hover:underline">Log in here</Link>
+                        <Link to="/loginGateway" className="text-blue-600 hover:underline">Log in here</Link>
                         
                     </p>
                 </div>

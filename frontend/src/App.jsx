@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard';
 import MentorProfile from "./pages/MentorProfile";
 import JuniorLogin from "./pages/JuniorLogin";
 import LoginGateway from "./pages/LoginGateway";
+import Resources from "./pages/Resources";
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/mentors/:mentorName" element={<MentorProfile />} />
           <Route path="/juniorLogin" element={<JuniorLogin/>} />
           <Route path="/loginGateway" element={<LoginGateway/>} />
+          <Route path="/resources" element={<Resources/>} />
+          
           
 
         </Routes>

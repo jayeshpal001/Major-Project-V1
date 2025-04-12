@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="hidden md:flex space-x-6 ">
         <Link to="/" className="font-semibold text-black">Home</Link>
         <a href="#mentorId" className="text-gray-500 hover:text-black">Mentors</a>
-        <a href="#" className="text-gray-500 hover:text-black">Resources</a>
+        <Link to="/resources" className="text-gray-500 hover:text-black">Resources</Link>
         <Link to="/dashboard" className="text-gray-500 hover:text-black">Community</Link>
       </div>
       
