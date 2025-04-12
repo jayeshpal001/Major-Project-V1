@@ -20,51 +20,88 @@ export const STEPS = [
 
 export const MENTORS = [
   {
+    id: 1,
     name: "Jayesh Pal",
     role: "Full-Stack Developer",
     skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/jayesh.jpg"
+    img: "/src/assets/images/jayesh.jpg",
+    experience: 7,
+    bio: "Passionate about building scalable web applications.",
+    company: "Google",
+    location: "New York, USA",
+    rating: 4.9,
+    students: 245
   },
   {
+    id: 2,
     name: "Deepika Sen",
-    role: "Front-End Developer",
-    skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/Deepika.png"
+    role: "Frontend Developer",
+    skills: ["React", "JavaScript", "CSS"],
+    img: "/src/assets/images/Deepika.png",
+    experience: 5,
+    bio: "Specializing in responsive user interfaces.",
+    company: "Amazon",
+    location: "Seattle, USA",
+    rating: 4.8,
+    students: 189
   },
   {
+    id: 3,
     name: "Taniya Pal",
     role: "Back-End Developer",
     skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/taniya.png"
+    img: "/src/assets/images/taniya.png",
+    experience: 5,
+    bio: "Specializing in responsive user interfaces.",
+    company: "Amazon",
+    location: "Seattle, USA",
+    rating: 4.8,
+    students: 189
   },
   {
+    id: 4,
     name: "Yash Sarvate",
     role: "Python Developer",
     skills: ["React", "Node.js", "AWS"],
-    img: "/src/assets/images/yash.png"
+    img: "/src/assets/images/yash.png",
+    experience: 5,
+    bio: "Specializing in responsive user interfaces.",
+    company: "Amazon",
+    location: "Seattle, USA",
+    rating: 4.8,
+    students: 189
   },
+  
   // Add other mentors
 ];
 
 export const TESTIMONIALS = [
     
     {
+      id: 1,
+    mentorId: 1,
       text: "The structured roadmaps gave me clear direction when I felt overwhelmed with learning resources.",
       author: "Jayesh Pal",
       role: "Full-Stack Developer @Google"
     },
     
     {
+      id: 2,
+    mentorId: 2,
       text: "Thanks to my mentor's guidance, I successfully transitioned from QA to DevOps engineering.",
       author: "Taniya Pal",
       role: "Back-End Developer @Amazon"
     },
     {
+      id: 3,
+      mentorId: 3,
         text: "This platform helped me land my first React developer position. The mentorship I received was invaluable!",
         author: "Deepika Sen",
         role: "Frontend Developer @Google"
       },
     {
+      id: 4,
+          mentorId: 4,
       text: "The community support helped me stay motivated during my job search. Highly recommend!",
       author: "Yash Sarwate",
       role: "Python Developer @Spotify"
@@ -206,4 +243,27 @@ export const GUIDANCE_DATA = [
       "Enjoy the last moments of college and stay connected."
     ],
   },
+];
+export const initialQuestions = [
+  {
+    id: 1,
+    text: "What's the best way to learn React in 2024?",
+    author: "Beginner Dev",
+    timestamp: "2 hours ago",
+    answers: [
+      {
+        id: 101,
+        text: "Start with the official React docs, then build small projects. The new React documentation is excellent!",
+        author: "Senior React Dev",
+        timestamp: "1 hour ago"
+      }
+    ]
+  },
+  {
+    id: 2,
+    text: "How do I optimize React performance?",
+    author: "Mid-level Dev",
+    timestamp: "4 hours ago",
+    answers: []
+  }
 ];

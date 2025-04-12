@@ -12,11 +12,11 @@ export default function Navbar() {
         <Link to="/" className="font-semibold text-black">Home</Link>
         <a href="#mentorId" className="text-gray-500 hover:text-black">Mentors</a>
         <a href="#" className="text-gray-500 hover:text-black">Resources</a>
-        <a href="#" className="text-gray-500 hover:text-black">Community</a>
+        <Link to="/dashboard" className="text-gray-500 hover:text-black">Community</Link>
       </div>
       
       <div className="hidden md:flex space-x-4">
-        <button className="bg-black text-white px-4 py-2 rounded-md"><Link to="/login" >Sign In</Link></button>
+        <button className="bg-black text-white px-4 py-2 rounded-md"><Link to="/loginGateway" >Sign In</Link></button>
       </div>
       
       <button className="md:hidden text-gray-600" onClick={() => setIsOpen(!isOpen)}>

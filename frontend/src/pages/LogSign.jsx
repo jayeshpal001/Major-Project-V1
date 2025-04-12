@@ -49,7 +49,7 @@ export default function LogSign() {
                         <img
                             src="https://cdn-icons-png.flaticon.com/512/3749/3749784.png"
                             alt="Mentorship Illustration"
-                            className="w-full h-auto object-contain"
+                            className="w-full h-auto object-contain animate-float"
                         />
                     </div>
                 </div>

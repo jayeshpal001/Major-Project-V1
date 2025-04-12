@@ -7,6 +7,11 @@ import LogSign from "./pages/LogSign";
 import JuniorSignup from "./pages/JuniorSignup";
 import Navbar from "./components/layout/Navbar";
 import Dashboard from './pages/Dashboard';
+import MentorProfile from "./pages/MentorProfile";
+import JuniorLogin from "./pages/JuniorLogin";
+import LoginGateway from "./pages/LoginGateway";
+
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +24,12 @@ function App() {
           <Route path="/logSign" element={<LogSign/>} />
           <Route path="/juniorSignup" element={<JuniorSignup/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/profile" element={<MentorProfile/>} />
+          <Route path="/mentors/:mentorName" element={<MentorProfile />} />
+          <Route path="/juniorLogin" element={<JuniorLogin/>} />
+          <Route path="/loginGateway" element={<LoginGateway/>} />
           
+
         </Routes>
     </div>
   );

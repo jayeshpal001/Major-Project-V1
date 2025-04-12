@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import MentorCard from "../ui/MentorCard";
-import { MENTORS } from "../../constants/data";
 
+import { MENTORS } from "../../constants/data";
+import MentorCard from "../ui/MentorCard";
 export default function MentorsSection() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -19,7 +19,7 @@ export default function MentorsSection() {
       <div className="grid md:grid-cols-4 gap-8">
         {isLoading ? (
           // Skeleton Loading
-          Array(3).fill(0).map((_, index) => (
+          Array(4).fill(0).map((_, index) => (
             <div 
               key={index}
               className="bg-white rounded-xl shadow-sm p-6 animate-pulse"

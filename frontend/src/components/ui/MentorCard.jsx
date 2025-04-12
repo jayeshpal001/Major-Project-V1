@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function MentorCard({ mentor }) {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6 border border-transparent hover:border-blue-500">
       <img
@@ -21,7 +25,10 @@ export default function MentorCard({ mentor }) {
           </span>
         ))}
       </div>
-      <button className="w-full py-2 rounded-lg bg-gray-100 hover:bg-blue-100 text-blue-600 transition-colors font-medium">
+      <button 
+        onClick={() => navigate(`/mentors/${mentor.name}`)}
+        className="w-full py-2 rounded-lg bg-gray-100 hover:bg-blue-100 text-blue-600 transition-colors font-medium"
+      >
         View Profile
       </button>
     </div>
