@@ -27,7 +27,8 @@ export default function Navbar() {
         <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden">
           <a href="#" className="font-semibold text-black">Home</a>
           <a href="#" className="text-gray-500 hover:text-black">Mentors</a>
-          <a href="#" className="text-gray-500 hover:text-black">Resources</a>
+          {/* <a href="#" className="text-gray-500 hover:text-black">Resources</a> */}
+          <Link to="/resources" >Resources</Link>
           <a href="#" className="text-gray-500 hover:text-black">Community</a>
           <button className="text-gray-600 hover:text-black">Sign In</button>
           <button className="bg-black text-white px-4 py-2 rounded-md">Sign Up</button>
